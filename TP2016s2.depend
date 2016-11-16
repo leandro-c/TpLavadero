@@ -85,3 +85,28 @@
 1479269004 source:c:\users\pc\desktop\c++\pre-entrega (incompleto)\cliente.cpp
 	"Cliente.h"
 
+1479305078 source:c:\users\leandro.casarin\tplavadero\arraylist.cpp
+	"ArrayList.h"
+
+1479305078 c:\users\leandro.casarin\tplavadero\arraylist.h
+	<iostream>
+
+1479305078 source:c:\users\leandro.casarin\tplavadero\cliente.cpp
+	"Cliente.h"
+
+1479305078 c:\users\leandro.casarin\tplavadero\cliente.h
+	<iostream>
+
+1479305078 source:c:\users\leandro.casarin\tplavadero\main.cpp
+	<iostream>
+	"Map.h"
+
+1479305078 c:\users\leandro.casarin\tplavadero\map.h
+	<iostream>
+	<stdlib.h>
+	"Cliente.h"
+	"ArrayList.h"
+
+1479305078 source:c:\users\leandro.casarin\tplavadero\map.cpp
+	"Map.h"
+
