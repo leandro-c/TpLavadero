@@ -1,0 +1,87 @@
+# depslib dependency file v1.0
+1479063030 source:c:\users\sawad\desktop\tp2016s2\cliente.cpp
+	"Cliente.h"
+
+1479060583 c:\users\sawad\desktop\tp2016s2\cliente.h
+	<iostream>
+
+1479081807 source:c:\users\sawad\desktop\tp2016s2\map.cpp
+	"Map.h"
+
+1479082850 source:c:\users\sawad\desktop\tp2016s2\main.cpp
+	<iostream>
+	"Map.h"
+
+1479062957 source:c:\users\sawad\desktop\tp2016s2\list.cpp
+	"list.h"
+
+1465171699 c:\users\sawad\desktop\tp2016s2\list.h
+	<iostream>
+
+1479080846 source:c:\users\sawad\desktop\tp2016s2\arraylist.cpp
+	"ArrayList.h"
+
+1479080795 c:\users\sawad\desktop\tp2016s2\arraylist.h
+	<iostream>
+
+1479079284 c:\users\sawad\desktop\tp2016s2\map.h
+	<iostream>
+	<stdlib.h>
+	"Cliente.h"
+	"ArrayList.h"
+
+1479080846 source:e:\ed\tps\2016s2\pre-entrega (completo)\arraylist.cpp
+	"ArrayList.h"
+
+1479080795 e:\ed\tps\2016s2\pre-entrega (completo)\arraylist.h
+	<iostream>
+
+1479063030 source:e:\ed\tps\2016s2\pre-entrega (completo)\cliente.cpp
+	"Cliente.h"
+
+1479060583 e:\ed\tps\2016s2\pre-entrega (completo)\cliente.h
+	<iostream>
+
+1479082850 source:e:\ed\tps\2016s2\pre-entrega (completo)\main.cpp
+	<iostream>
+	"Map.h"
+
+1479079284 e:\ed\tps\2016s2\pre-entrega (completo)\map.h
+	<iostream>
+	<stdlib.h>
+	"Cliente.h"
+	"ArrayList.h"
+
+1479080846 source:e:\ed\tps\2016s2\pre-entrega (incompleto)\arraylist.cpp
+	"ArrayList.h"
+
+1479080795 e:\ed\tps\2016s2\pre-entrega (incompleto)\arraylist.h
+	<iostream>
+
+1479090751 source:e:\ed\tps\2016s2\pre-entrega (incompleto)\cliente.cpp
+	"Cliente.h"
+
+1479090762 e:\ed\tps\2016s2\pre-entrega (incompleto)\cliente.h
+	<iostream>
+
+1479080846 source:c:\users\pc\desktop\c++\pre-entrega (incompleto)\arraylist.cpp
+	"ArrayList.h"
+
+1479080795 c:\users\pc\desktop\c++\pre-entrega (incompleto)\arraylist.h
+	<iostream>
+
+1479092220 source:c:\users\pc\desktop\c++\pre-entrega (incompleto)\map.cpp
+	"Map.h"
+
+1479091303 c:\users\pc\desktop\c++\pre-entrega (incompleto)\map.h
+	<iostream>
+	<stdlib.h>
+	"Cliente.h"
+	"ArrayList.h"
+
+1479090762 c:\users\pc\desktop\c++\pre-entrega (incompleto)\cliente.h
+	<iostream>
+
+1479269004 source:c:\users\pc\desktop\c++\pre-entrega (incompleto)\cliente.cpp
+	"Cliente.h"
+
