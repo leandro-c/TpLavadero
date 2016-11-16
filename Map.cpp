@@ -110,7 +110,11 @@ AVL splitMaxAVL(Cliente& c, AVL t) {
 
 // Prop.: crea un Map vacio
 Map emptyM() {
-    /// COMPLETAR
+    AVLNode* m = new AVLNode;
+    m->height = 0;
+    m->kv = NULL;
+    m->left = NULL;
+    return m;
 }
 
 // Prop.: devuelve un value dado una key

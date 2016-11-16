@@ -19,7 +19,8 @@ string getNombre(Cliente c) {
 }
 
 void destroyCliente(Cliente& c) {
-    /// COMPLETAR
+   destroy c,
+   c = NULL;
 }
 
 void printCliente(Cliente c) {
