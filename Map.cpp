@@ -119,21 +119,30 @@ Map emptyM() {
 
 // Prop.: devuelve un value dado una key
 Cliente lookupM(Map& m, string key) {
-    if(isNothing(m->kv)){
-       lookupM(m->right,key);
+    if(m->kv == key){
+        return key;
     }else{
-        lookupM(m->left,key);
+        if(m->kv < key){
+            lookupM(m->left,key);
+        }else{
+            lookupM(m->right,key);
+        }
     }
 }
 
 // Prop.: asocia un key con un value
 void addM(Map& m, Cliente cliente) {
     m = joinAVL(m->kv, m->left, m->right);
-    if(getCuit(cliente) != getCuit(m->kv)){
-        rJoinAVL(cliente,m->right,m->left);
+    if(m->kv == NULL){
+        leafAVL(cliente);
     }else{
-        lJoinAVL(cliente,m->right,m->left);
+        if(m->kv < cliente){
+           rJoinAVL(cliente,m->left,m->right);
+        }else{
+            lJoinAVL(cliente,m->left,m->right);
+        }
     }
+
 }
 
 // Prop.: indica si la respuesta del lookup es válida
