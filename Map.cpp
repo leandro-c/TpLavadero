@@ -122,7 +122,7 @@ Cliente lookupM(Map& m, string key) {
     if(m->kv == key){
         return key;
     }else{
-        if(m->kv < key){
+        if(getCuit(m->kv) < getCuit(key)){
             lookupM(m->left,key);
         }else{
             lookupM(m->right,key);
