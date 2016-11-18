@@ -136,7 +136,7 @@ void addM(Map& m, Cliente cliente) {
     if(m->kv == NULL){
         leafAVL(cliente);
     }else{
-        if(m->kv < cliente){
+        if(getCuit(m->kv) < getCuit(cliente)){
            rJoinAVL(cliente,m->left,m->right);
         }else{
             lJoinAVL(cliente,m->left,m->right);
