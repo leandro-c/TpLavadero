@@ -110,3 +110,28 @@
 1479305078 source:c:\users\leandro.casarin\tplavadero\map.cpp
 	"Map.h"
 
+1479560084 source:/home/leacasarin/Escritorio/TpLavadero/ArrayList.cpp
+	"ArrayList.h"
+
+1479560084 /home/leacasarin/Escritorio/TpLavadero/ArrayList.h
+	<iostream>
+
+1479562431 source:/home/leacasarin/Escritorio/TpLavadero/Cliente.cpp
+	"Cliente.h"
+
+1479560084 /home/leacasarin/Escritorio/TpLavadero/Cliente.h
+	<iostream>
+
+1479562524 source:/home/leacasarin/Escritorio/TpLavadero/main.cpp
+	<iostream>
+	"Map.h"
+
+1479560084 /home/leacasarin/Escritorio/TpLavadero/Map.h
+	<iostream>
+	<stdlib.h>
+	"Cliente.h"
+	"ArrayList.h"
+
+1479565175 source:/home/leacasarin/Escritorio/TpLavadero/Map.cpp
+	"Map.h"
+

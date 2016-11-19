@@ -110,39 +110,42 @@ AVL splitMaxAVL(Cliente& c, AVL t) {
 
 // Prop.: crea un Map vacio
 Map emptyM() {
-    AVLNode* m = new AVLNode;
-    m->height = 0;
-    m->kv = NULL;
-    m->left = NULL;
-    return m;
+//    AVLNode* m = new AVLNode;
+//    m->height = 0;
+//    m->kv = NULL;
+//    m->left = NULL;
+    return NULL;
 }
 
 // Prop.: devuelve un value dado una key
 Cliente lookupM(Map& m, string key) {
-    if(m->kv == key){
-        return key;
+    if(m == NULL){return NULL;}
+
+    if(getCuit(m->kv) == key){
+        return m->kv;
     }else{
-        if(getCuit(m->kv) < getCuit(key)){
-            lookupM(m->left,key);
+        if(getCuit(m->kv) > key){
+            return lookupM(m->left,key);
         }else{
-            lookupM(m->right,key);
+            return lookupM(m->right,key);
         }
     }
+
 }
 
 // Prop.: asocia un key con un value
 void addM(Map& m, Cliente cliente) {
-    m = joinAVL(m->kv, m->left, m->right);
-    if(m->kv == NULL){
-        leafAVL(cliente);
+
+    if(m == NULL){
+        m = leafAVL(cliente);
     }else{
         if(getCuit(m->kv) < getCuit(cliente)){
-           rJoinAVL(cliente,m->left,m->right);
+           addM(m->right,cliente);
         }else{
-            lJoinAVL(cliente,m->left,m->right);
+            addM(m->left,cliente);
         }
     }
-
+    m = joinAVL(m->kv, m->left, m->right);
 }
 
 // Prop.: indica si la respuesta del lookup es válida
@@ -158,15 +161,18 @@ void removeM(Map& m, string key) {
 
     if(getCuit(m->kv) == key) {
        if(m->left == NULL) {
-          /// COMPLETAR
+          m = m->right;
+          Map cr = m->right;
+          delete cr;
+          cr = NULL;
           return;
        } else {
           m = splitMaxAVL(m->kv, m);
        }
     } else if(getCuit(m->kv) > key) {
-        /// COMPLETAR
+        removeM(m->right,key);
     } else if(getCuit(m->kv) < key) {
-        /// COMPLETAR
+        removeM(m->left,key);
     }
 
     m = joinAVL(m->kv, m->left, m->right);
@@ -174,7 +180,10 @@ void removeM(Map& m, string key) {
 
 // Prop.: devuelve la lista de claves de un Map
 ArrayList domM(Map& m) {
-    /// COMPLETAR
+    ArrayList a = crearArrayList();
+    if(m == NULL){
+        domM(m);
+    }
 }
 
 // Prop.: libera la memoria de un Map

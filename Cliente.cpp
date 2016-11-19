@@ -19,14 +19,18 @@ string getNombre(Cliente c) {
 }
 
 void destroyCliente(Cliente& c) {
-   destroy c,
+   delete c;
    c = NULL;
 }
 
 void printCliente(Cliente c) {
+if(c ==NULL){
+    cout << "NULL" << endl;
+}else{
     cout << "Cliente {" << endl;
     cout << "  cuit: " << c->cuit << endl;
     cout << "  nombre: " << c->nombre << endl;
     cout << "}" << endl;
+    }
 }
 
