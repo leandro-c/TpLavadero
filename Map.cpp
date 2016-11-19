@@ -160,10 +160,9 @@ void removeM(Map& m, string key) {
 
     if(getCuit(m->kv) == key) {
        if(m->left == NULL) {
-          m = m->right;
           Map cr = m->right;
-          delete cr;
-          cr = NULL;
+          delete m;
+          m = cr;
           return;
        } else {
           m = splitMaxAVL(m->kv, m);

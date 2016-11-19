@@ -13,11 +13,11 @@ int main()
     Cliente c3 = crearCliente("4", "priezer");
     //printCliente(c1);
     Map m = emptyM();
-    addM(m,c1);
+    //addM(m,c1);
     addM(m,c2);
     addM(m,c3);
     //printCliente(lookupM(m,"20"));
-    //removeM(m,"245");
+    removeM(m,"2");
     printMap(m);
     //ArrayList arr = domM(m);
     //imprimirArrayList(arr);
