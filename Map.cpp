@@ -119,7 +119,7 @@ Map emptyM() {
 
 // Prop.: devuelve un value dado una key
 Cliente lookupM(Map& m, string key) {
-    if(m == NULL){return NULL;}
+    if(m == NULL){return NULL;}//lo del maybe estaria implicito , pero hago esto en caso de que el map este en null
 
     if(getCuit(m->kv) == key){
         return m->kv;
@@ -132,7 +132,6 @@ Cliente lookupM(Map& m, string key) {
     }
 
 }
-
 // Prop.: asocia un key con un value
 void addM(Map& m, Cliente cliente) {
 
@@ -181,14 +180,18 @@ void removeM(Map& m, string key) {
 // Prop.: devuelve la lista de claves de un Map
 ArrayList domM(Map& m) {
     ArrayList a = crearArrayList();
-    if(m == NULL){
-        domM(m);
+    if(m != NULL){
+        add(a, getCuit(m->kv));
+        addAll(a,domM(m->right));
+        addAll(a,domM(m->left));
     }
+    return a;
 }
 
 // Prop.: libera la memoria de un Map
 void destroyM(Map& m) {
-    /// COMPLETAR
+    delete m;
+    m = NULL;
 }
 
 ///////////////////////////////////////////////
