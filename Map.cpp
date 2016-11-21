@@ -109,6 +109,7 @@ AVL splitMaxAVL(Cliente& c, AVL t) {
 ///////////////////////////////////////////////
 
 // Prop.: crea un Map vacio
+//Costo: 0(1) --Justificacion: Delvuelve solamente NULL
 Map emptyM() {
 //    AVLNode* m = new AVLNode;
 //    m->height = 0;
@@ -118,6 +119,7 @@ Map emptyM() {
 }
 
 // Prop.: devuelve un value dado una key
+//Costo: 0(log n) --Justificacion: busca en una parte del arbol, segun la su cuit ,busca en su parte izq o derecha.
 Cliente lookupM(Map& m, string key) {
     if(m == NULL){return NULL;}//lo del maybe estaria implicito , pero hago esto en caso de que el map este en null
 
@@ -133,6 +135,7 @@ Cliente lookupM(Map& m, string key) {
 
 }
 // Prop.: asocia un key con un value
+//Costo: 0(log n) --Justificacion: inserta en una parte del arbol, y no tiene que recorerlo todo para hacerlo.
 void addM(Map& m, Cliente cliente) {
 
     if(m == NULL){
@@ -153,6 +156,7 @@ bool isNothing(Cliente c) {
 }
 
 // Prop.: elimina un value dado una key
+//Costo: 0(log n) --Justificacion: borra en una parte del arbol, y no tiene que recorerlo todo para hacerlo.
 void removeM(Map& m, string key) {
     if(m == NULL) {
         return;
@@ -177,6 +181,7 @@ void removeM(Map& m, string key) {
 }
 
 // Prop.: devuelve la lista de claves de un Map
+//Costo: 0(n^2 ) --Justificacion: recorre en sus dos arboles para poder crear un solo array con todas las hojas.
 ArrayList domM(Map& m) {
     ArrayList a = crearArrayList();
     if(m != NULL){
@@ -189,8 +194,13 @@ ArrayList domM(Map& m) {
 
 // Prop.: libera la memoria de un Map
 void destroyM(Map& m) {
-    delete m;
-    m = NULL;
+    if(m != NULL){
+        destroyM(m->left);
+        destroyM(m->right);
+        delete m;
+        m = NULL;
+    }
+
 }
 
 ///////////////////////////////////////////////
